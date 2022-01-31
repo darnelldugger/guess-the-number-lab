@@ -14,12 +14,22 @@ const game = {
 
     // console.log(game.play.newGuess)
   },
+  
   getGuess: function(){
-    let input = prompt( `Enter a guess between ${this.smallestNum} and ${this.biggestNum}.`)
+    let input = (prompt( `Enter a guess between ${this.smallestNum} and ${this.biggestNum}.`))
       while(input >= this.smallestNum || input <= this.biggestNum){
+        
        }
+    },
+  
+    render: function(){
+    if(input = this.secretNum){
+      `Congrats! You guessed the number in ${this.prevGuesses}!`
+    } else {
+      `Your guess is too `
     }
+  },
   
 }
 
-console.log(game)
+console.log(game.getGuess())
