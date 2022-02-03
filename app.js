@@ -25,12 +25,16 @@ const game = {
   },
   
   render: function(){
-  if(this.prevGuesses[this.prevGuesses.length -1] === this.secretNum){
-    alert(`Congrats! You guessed the number in ${this.prevGuesses}!`)
-  } else {
-    alert(`Your guess is too high/low `)
-  }
-},
+    const highOrLow = this.prevGuesses[this.prevGuesses.length - 1] < this.secretNum ? 'Low' : 'High'
+    //Ternary format  |--------------------------CONDITION-------------------------|  |true|  |false|
+  
+  
+    if (this.prevGuesses[this.prevGuesses.length - 1] === this.secretNum) {
+      alert(`Congrats! You guessed the number in ${this.prevGuesses}!`)
+    } else {
+      alert(`Your guess is too ${highOrLow}`) // <====== Test it out!
+    }
+  },
   
 }
 game.play()
